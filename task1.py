@@ -17,10 +17,11 @@ number: the number to be rounded
 digits: optional. The number of decimal places to keep
 round(103.2221,2) -> 103.22
 """
-
-openBalance = 1000
-deposits = [200,200,200,200,200,200,200,200,200,200,200,200]            # final: 3328.8
-#deposits = [500,1000,300,-250,500,185,-500,205,1200,-550,125,200]      # final: 3887.71
-#deposits = [1000,542,221.52,983,29.75,-10,982.23,10988,287,198,32,100]  # final: 16702.93
-
-    
+openBalance=1000
+deposits=[200,200,200,200,200,200,200,200,200,200,200,200]# final: 3328.8 ||| 1200 + 60 (1260), 1460 + 
+#deposits=[500,1000,300,-250,500,185,-500,205,1200,-550,125,200]# final: 3887.71
+#deposits=[1000,542,221.52,983,29.75,-10,982.23,10988,287,198,32,100]# final: 16702.93
+#I will be trying to make this code as memory efficient as possible
+for i in range(0,len(deposits)):
+   openBalance=openBalance+deposits[i]
+   openBalance=openBalance+(0.05*openBalance),print(openBalance)
